@@ -58,8 +58,7 @@ class Form extends Component {
 };
 
 Form.propTypes = {
-  handleChange: PropTypes.func.isRequired,
-  handleSubmit: PropTypes.func.isRequired,
+  addContacts: PropTypes.func.isRequired,
 };
 
 export default Form;
