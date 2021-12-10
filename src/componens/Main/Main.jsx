@@ -1,10 +1,11 @@
 import PhoneBook from "../PhoneBook";
+import style from "./Main.module.css";
 const Main = () => {
   return (
     <>
-      <section>
-        <div>
-          <PhoneBook/>
+      <section className={style.Main}>
+        <div className={style.container}>
+          <PhoneBook />
         </div>
       </section>
     </>

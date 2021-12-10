@@ -1,9 +1,9 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 const ContactsList = ({ filterContacts, deleteContacts }) => {
   return (
     <>
       <ul>
-        {filterContacts().map(({ id, name, number }) => {
+        {filterContacts.map(({ id, name, number }) => {
           return (
             <li key={id}>
               {`${name}: ${number}`}
@@ -16,8 +16,9 @@ const ContactsList = ({ filterContacts, deleteContacts }) => {
   );
 };
 
-// ContactsList.propTypes = {
-
-// };
+ContactsList.propTypes = {
+  deleteContacts: PropTypes.func.isRequired,
+  filterContacts: PropTypes.array.isRequired,
+};
 
 export default ContactsList;

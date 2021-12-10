@@ -3,9 +3,6 @@ import { Component } from "react";
 import Contacts from "../Contacts";
 import PhoneBookForm from "../PhoneBookForm";
 
-// const INITIAL_STATE = {
-//   contacts: [],
-// };
 class PhoneBook extends Component {
   state = {
     contacts: [
@@ -51,13 +48,12 @@ class PhoneBook extends Component {
 
   render() {
     const { filter } = this.state;
-    // const filterContacts = contacts.filter(({ name }) => name.toLowerCase().includes(filter.toLowerCase()));
 
     return (
       <>
         <PhoneBookForm addContacts={this.addContacts} />
         <Contacts
-          filterContacts={this.filterContacts}
+          filterContacts={this.filterContacts()}
           handleChange={this.handleChange}
           filter={filter}
           deleteContacts={this.deleteContacts}

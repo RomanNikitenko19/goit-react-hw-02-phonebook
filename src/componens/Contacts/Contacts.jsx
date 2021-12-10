@@ -14,8 +14,10 @@ const Contacts = ({ filterContacts, handleChange, filter, deleteContacts }) => {
   );
 };
 Contacts.propTypes = {
-  filterContacts: PropTypes.func,
-  handleChange: PropTypes.func,
+  filterContacts: PropTypes.array.isRequired,
+  deleteContacts: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
 };
 
 export default Contacts;
